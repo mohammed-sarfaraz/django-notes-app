@@ -4,7 +4,7 @@ pipeline{
     agent { label "master" }
     
     stages{
-        stage("Shared-library-testing"){
+        stage("Shared-library-testigng"){
             steps{
                 script{
                     hello()
