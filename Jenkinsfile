@@ -44,8 +44,8 @@ pipeline{
         stage("deploy"){
             steps{
                 echo "This is deploying the code"
-                sh "docker kill $(docker ps -q)"
-                sh "docker rm $(docker ps -a -q)"
+                sh "docker kill [$(docker ps -q)]"
+                sh "docker rm [$(docker ps -a -q)]"
                 sh "docker compose down"
                 sh "docker compose up -d"
                 
